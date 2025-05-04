@@ -3,14 +3,14 @@ version: '3.8'
 services:
   app:
     image: openjdk:21-jdk-slim
-    container_name: pervai
+    container_name: DGF
     build:
       context: .
       dockerfile: Dockerfile
     ports:
       - "8080:8080"
     environment:
-      - SPRING_DATASOURCE_URL=jdbc:postgresql://db:5432/ct
+      - SPRING_DATASOURCE_URL=jdbc:postgresql://db:5432/books
       - SPRING_DATASOURCE_USERNAME=postgres
       - SPRING_DATASOURCE_PASSWORD=postgres
     depends_on:
