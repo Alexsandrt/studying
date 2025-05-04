@@ -1,1 +1,1 @@
-create database ct OWNER postgres;
+create database ct;
