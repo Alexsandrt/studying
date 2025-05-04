@@ -23,6 +23,6 @@ services:
       POSTGRES_USER: postgres
       POSTGRES_PASSWORD: postgres
     volumes:
-      - ./scripts:/docker-entrypoint-initdb.d
-    ports:
-      - "5432:5432"
+      - ./init.sql:/docker-entrypoint-initdb.d/init.sql
+    expose:
+      - "5432"
